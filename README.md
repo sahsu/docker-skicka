@@ -4,13 +4,21 @@
  1. dockerfile for skicka ( https://github.com/google/skicka )
 
 # Usage
- 1. -v ~:/root
+ 1. setup skicka usage first
 
  ```
- sudo docker run -it --rm -v ~:/root sahsu/docker-skicka init
+ sudo docker run -it --rm -v $HOME:/root -e HOME=$HOME sahsu/docker-skicka /skicka init
+ sudo docker run -it --rm -v $HOME:/root -e HOME=$HOME sahsu/docker-skicka /skicka -no-browser-auth ls
+ ```
+ 1. copy that copy to your browser and choice what you google account want to connect your instance
+ 1. paste your verification code back to skicka
+ 1. do again ls will starting updating metadata cache
+
+ ```
+ sudo docker run -it --rm -v $HOME:/root -e HOME=$HOME sahsu/docker-skicka /skicka ls
  ```
 
- 1. your skicka config will stored on your home directory and run 
+ 1. after metadata refreshed you can start usage skicka by
 
  ```
  sudo docker run -it --rm -v ~:/root sahsu/docker-skicka {upload, download .... }
