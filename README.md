@@ -31,5 +31,4 @@
  CGO_ENABLED=0 go get -a -ldflags '-s' github.com/google/skicka
  docker cp /go/bin/skicka .
  ```
- ( and so on
-
+ ( and so on )
