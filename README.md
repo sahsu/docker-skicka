@@ -21,7 +21,7 @@
  1. after metadata refreshed you can start usage skicka by
 
  ```
- sudo docker run -it --rm -v ~:/root sahsu/docker-skicka {upload, download .... }
+ sudo docker run --rm -v $HOME:/root -e HOME=$HOME sahsu/docker-skicka {upload, download .... }
  ```
 
 # skicka binary come from
